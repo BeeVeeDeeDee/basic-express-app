@@ -3,14 +3,14 @@ var express = require('express'),
     http = require('http'),
     mysql = require('mysql'),
     app = express(),
-    port = 8080;
+    port = yourport;
 
 // connect to database
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'root',
-    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock', // unix socket is needed
+    host     : 'xxx',
+    user     : 'xxx',
+    password : 'xxx',
+    socketPath: 'xxx', // unix socket is needed
     database : 'animal_db'
 });
 
@@ -43,7 +43,7 @@ app.get('/about', function(req, res) {
 
 // get all animals
 app.get('/animals', (req, res) => {
-    let sql = 'SELECT * FROM bears';
+    let sql = 'SELECT * FROM whatever';
     let query = connection.query(sql, (err, results) => {
         if(err) throw err;
         // console.log(results);
