@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     user     : 'xxx',
     password : 'xxx',
     socketPath: 'xxx', // unix socket is needed
-    database : 'animal_db'
+    database : 'xxx'
 });
 
 // Connect
